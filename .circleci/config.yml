@@ -14,12 +14,11 @@ jobs:
       - checkout
       - run: echo "A first hello (2nd)"
       - run: sleep 15
-
 workflows:
   version: 2
   one_and_two:
     jobs:
       - one
-      - two:
-        requires:
+      - two
+        requires
           - one
