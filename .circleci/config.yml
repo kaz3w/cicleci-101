@@ -6,14 +6,12 @@ jobs:
     steps:
       - checkout
       - run: echo "A first hello (fixed)"
-      - run: sleep 25
   two:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "A first hello (2nd)"
-      - run: sleep 15
 workflows:
   version: 2
   one_and_two:
